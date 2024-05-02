@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 // import { Modal } from "antd";
 import Link from "next/link";
+import { login } from "../reducers/user";
 
 function SignIn() {
     const [signInUsername, setSignInUsername] = useState("");
