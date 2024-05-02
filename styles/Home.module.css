@@ -20,3 +20,43 @@
 .title a:hover, .title a:focus, .title a:active {
   text-decoration: underline;
 }
+
+.container {
+height: 100vh;
+background-color: #0E2229;
+display: flex,
+}
+
+.signin {
+border-radius: 15px;
+cursor: pointer;
+background-color: #0070f3;
+color: white;
+border-style: hidden;
+}
+
+.signup {
+  border-radius: 15px;
+  cursor: pointer;
+  background-color: #0E2229;
+  color: #0070f3;
+  border-style: hidden;
+  border: 1px solid white
+  }
+
+  .account {
+  color: white;
+  }
+
+  .join {
+  color: white
+  }
+
+  .title {
+  color: white
+  }
+
+  .image {
+  background-image: url('../public/logo.png') ;
+  width: 300px;
+  }
