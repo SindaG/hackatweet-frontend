@@ -24,24 +24,29 @@
 .container {
 height: 100vh;
 background-color: #0E2229;
-display: flex,
+display: flex;
 }
 
 .signin {
-border-radius: 15px;
+border-radius: 50px;
+padding: 10px 100px;
 cursor: pointer;
 background-color: #0070f3;
 color: white;
+font-weight: 600;
 border-style: hidden;
 }
 
 .signup {
-  border-radius: 15px;
+  border-radius: 50px;
+  padding: 10px 98px;
   cursor: pointer;
   background-color: #0E2229;
   color: #0070f3;
   border-style: hidden;
-  border: 1px solid white
+  border: 1px solid white;
+  font-weight: 600;
+
   }
 
   .account {
@@ -49,14 +54,33 @@ border-style: hidden;
   }
 
   .join {
-  color: white
+  color: white;
+  font-size:30px;
+  font-weight: 700;
   }
 
   .title {
-  color: white
+  color: white;
+  font-size: 72px;
+  font-weight: 700;
   }
 
   .image {
-  background-image: url('../public/logo.png') ;
-  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../public/twitter-image.jpg') ;
+  width: 40vw;
+  }
+
+  .signContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 4vw;
+  }
+
+  .logo{
+    transform: rotate(180deg);
   }

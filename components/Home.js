@@ -2,6 +2,8 @@ import styles from '../styles/Home.module.css';
 import { useState } from "react";
 import React from 'react'
 import Image from 'next/image';
+import SignIn from './SignIn';
+import SignUp from './SignUp';
 
 
 function Home() {
@@ -9,14 +11,18 @@ function Home() {
   return (
     <div className={styles.container}>
       <div className= {styles.image}> 
-      bonjour
+        <Image className={styles.logo} src="/logo.png" alt="logo" width={200} height={200} />
       </div>
-      <Image className={styles.logo} src="/logo.png" alt="logo" width={50} height={50} />
-      <h1 className={styles.title}>See what's happening</h1>
-      <p className={styles.join}>Join Hackatweet today.</p>
-      <button className={styles.signup}>Sign up</button>
-      <p className={styles.account}>Already have an account</p>
-      <button className={styles.signin}>Sign in</button>
+      <div className={styles.signContainer}>
+        <Image className={styles.logo} src="/logo.png" alt="logo" width={50} height={50} />
+        <h1 className={styles.title}>See what's <br></br> happening</h1>
+        <p className={styles.join}>Join Hackatweet today.</p>
+        <SignUp/>
+        <button className={styles.signup}>Sign up</button>
+        <p className={styles.account}>Already have an account ?</p>
+        <SignIn/>
+        <button className={styles.signin}>Sign in</button>
+      </div>
     </div>
   )
 }
