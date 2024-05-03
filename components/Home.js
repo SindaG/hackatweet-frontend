@@ -7,6 +7,8 @@ import { useRouter } from 'next/router'
 import Image from 'next/image';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import LastTweets from './LastTweets';
+
 
 
 function Home() {
