@@ -1,6 +1,7 @@
 import styles from "../styles/SignIn.module.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/router'
 // import { Modal } from "antd";
 import Link from "next/link";
 import { login } from "../reducers/user";
@@ -8,6 +9,7 @@ import { login } from "../reducers/user";
 function SignIn() {
     const [signInUsername, setSignInUsername] = useState("");
     const [signInPassword, setSignInPassword] = useState("");
+    const router = useRouter()
 
     const dispatch = useDispatch();
 
@@ -20,6 +22,7 @@ function SignIn() {
 			.then(data => {
 				if (data.result) {
 					dispatch(login({username : signInUsername, token : data.token}));
+          router.push('/login')
 					setSignInUsername('');
 					setSignInPassword('');
 				}
