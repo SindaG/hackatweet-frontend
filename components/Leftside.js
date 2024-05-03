@@ -1,27 +1,35 @@
 import styles from '../styles/Leftside.module.css';
-import User from '../components/SignUp'
 import { useSelector } from 'react-redux';
+import Image from 'next/image';
 
 
+function Tweet() {
 
+    const firstsnameUser = useSelector((state) => state.user.value.firstname)
+    const usernameUser = useSelector((state) => state.user.value.username)
 
-function Tweet () {
+    return (
+        <div className={styles.container}>
+            <div>
+                <Image className={styles.logo} width={50} height={50} alt="logo" src="/logo.png" />
+            </div>
 
-const User = useSelector((state) => state.User.username && state.User.firstname) 
+            <div>
+                <div className= {styles.profil}>
+                    <Image className={styles.logo} width={50} height={50} alt="logo" src="/logo.png" />
+                    <div className={styles.names}>
+                        <div className={styles.firstname}>{firstsnameUser}</div>
+                        <div className={styles.username}>@{usernameUser}</div>
+                    </div>
+                </div>
+                <button className={styles.logout}>
+                    Logout
+                </button>
 
-return (
-<div className={styles.container}>
-<div>
-<Image className= {styles.logo} alt= "logo" src = "/logo.png"/>
-</div>
+            </div>
 
-<div>
-<button className={styles.logout}>
-    Logout
-</button>
-</div>{User}</div>
-)
+        </div>
+    )
 
 }
-
 export default Tweet;

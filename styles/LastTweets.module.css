@@ -1,0 +1,57 @@
+.tweetButton {
+    border-radius: 60px;
+    padding: 6px 10px;
+    cursor: pointer;
+    background-color: #0070f3;
+    color: white;
+    font-weight: 600;
+    border-style: hidden;
+    padding-right: 25px;
+    padding-left: 25px;
+    font-size: 15px;
+}
+
+.container {
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    background-color: #15202B;
+    justify-content: center;
+    border-left: 1px solid #728394;
+    height: 100vh;
+}
+
+.home {
+    padding: 15px;
+    width: 50vw;
+    display: flex;
+    justify-content: flex start;
+
+}
+
+.textZone {
+    height: 50px;
+    background-color: transparent;
+    border-width: 0 0 1px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 15px;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.divbouton {
+    justify-content: flex-end;
+    display: flex;
+    padding: 30px;
+    border-bottom: 1px solid #728394;
+}
