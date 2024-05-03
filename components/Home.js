@@ -10,7 +10,6 @@ import SignUp from './SignUp';
 import LastTweets from './LastTweets';
 
 
-
 function Home() {
 
   const token = useSelector(state => state.user.value.token)
