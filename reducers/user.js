@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import SignIn from '../components/SignIn';
 
 const initialState = {
-  value: { firstname : null, username: null, token: null, },
+  value: { firstname : 'yanis', username: 'yanis', token: 'yanis', },
 };
 
 export const userSlice = createSlice({
