@@ -8,3 +8,15 @@ body {
 * {
   box-sizing: border-box;
 }
+
+
+.ant-modal .ant-modal-content{
+  max-width: 400px;
+  background-color: #0e2229;
+  padding: 60px 20px;
+
+}
+
+.anticon > svg:nth-child(1){
+  color: #fff;
+}

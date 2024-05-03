@@ -1,6 +1,7 @@
 import styles from '../styles/SignUp.module.css';
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
+import Image from 'next/image';
 // import { Modal } from "antd";
 import Link from "next/link";
 import { signUp } from "../reducers/user";
@@ -31,8 +32,11 @@ function SignUp() {
   return (
     <div className={styles.signUpContainer}>
       <div className={styles.signUpSection}>
-        <p>Sign-Up</p>
+      <Image className={styles.logo} src="/logo.png" alt="logo" width={50} height={50} />
+        <p className={styles.signUpTitle}>Sign-Up</p>
+        <div className={styles.signUpForm}>
         <input
+          className={styles.signUpInput}
           type="text"
           placeholder="Firstname"
           id="signUpFirstname"
@@ -40,6 +44,7 @@ function SignUp() {
           value={signUpFirstname}
         />
         <input
+          className={styles.signUpInput}
           type="text"
           placeholder="Username"
           id="signUpUsername"
@@ -47,6 +52,7 @@ function SignUp() {
           value={signUpUsername}
         />
         <input
+          className={styles.signUpInput}
           type="password"
           placeholder="Password"
           id="signUpPassword"
@@ -56,6 +62,7 @@ function SignUp() {
         <button id="connection" onClick={() => handleRegister()} className={styles.signup}>
           Sign up
         </button>
+        </div>
       </div>
     </div>
   );
