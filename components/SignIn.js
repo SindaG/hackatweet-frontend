@@ -2,7 +2,6 @@ import styles from "../styles/SignIn.module.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/router'
-// import { Modal } from "antd";
 import Link from "next/link";
 import { login } from "../reducers/user";
 

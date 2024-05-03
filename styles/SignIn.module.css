@@ -1,9 +1,10 @@
 .signin {
-border-radius: 50px;
-padding: 10px 100px;
-cursor: pointer;
-background-color: #0070f3;
-color: white;
-font-weight: 600;
-border-style: hidden;
+    border-radius: 50px;
+    padding: 10px 98px;
+    cursor: pointer;
+    background-color: #0E2229;
+    color: white;
+    border-style: hidden;
+    border: 1px solid white;
+    font-weight: 600;
 }

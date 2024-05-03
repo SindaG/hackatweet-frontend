@@ -1,13 +1,12 @@
 import styles from '../styles/Home.module.css';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useSelector } from 'react-redux';
 import React from 'react'
 import { useRouter } from 'next/router'
-
+import { Modal } from 'antd';
 import Image from 'next/image';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
-import LastTweets from './LastTweets';
 
 
 function Home() {
@@ -15,11 +14,37 @@ function Home() {
   const token = useSelector(state => state.user.value.token)
   const router = useRouter()
 
-  useEffect(() => {
-    if (token) {
-      router.push('/login')
-    }
-  }, [])
+  const [isModalSignInOpen, setIsModalSignInOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const showModalSignIn = () => {
+    setIsModalSignInOpen(true);
+  };
+  const handleOkSignIn = () => {
+    setIsModalSignInOpen(false);
+  };
+  const handleCancelSignIn = () => {
+    setIsModalSignInOpen(false);
+  };
+
+//A mettre dans le Persistore à la fin : 
+  // useEffect(() => {
+  //   if (token) {
+  //     router.push('/login')
+  //   }
+  // }, [])
+
+
 
   return (
     <div className={styles.container}>
@@ -30,11 +55,15 @@ function Home() {
         <Image className={styles.logo} src="/logo.png" alt="logo" width={50} height={50} />
         <h1 className={styles.title}>See what's <br></br> happening</h1>
         <p className={styles.join}>Join Hackatweet today.</p>
-        <SignUp/>
-        <button className={styles.signup}>Sign up</button>
+        <Modal className={styles.modalContainer} footer={null} open={isModalOpen} onCancel={handleCancel}>
+          <SignUp/>
+        </Modal>
+        <button className={styles.signup} onClick={showModal}>Sign up</button>
         <p className={styles.account}>Already have an account ?</p>
-        <SignIn/>
-        <button className={styles.signin}>Sign in</button>
+        <Modal footer={null} open={isModalSignInOpen}  onCancel={handleCancelSignIn}>
+          <SignIn/>
+        </Modal>
+        <button className={styles.signin} onClick={showModalSignIn}>Sign in</button>
       </div>
     </div>
   )
