@@ -6,12 +6,14 @@ import Hashtags from '../components/Hashtags';
 
 
 
+
 function LoginPage() {
   return (
     <div className={styles.tweetContainer}>
       <Leftside/>
       <LastTweets/>
       <Hashtags/>
+     
     </div>
   );
 }

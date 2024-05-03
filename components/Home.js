@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux';
 import React from 'react'
 import { useRouter } from 'next/router'
 import { Modal } from 'antd';
-import Image from 'next/image';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
+import Image from 'next/image';
 
 
 function Home() {

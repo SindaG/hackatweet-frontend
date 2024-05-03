@@ -1,5 +1,5 @@
 import styles from '../styles/LastTweets.module.css';
-
+import Tweets from '../components/Tweets';
 function LastTweets() {
     return (
         <div className={styles.container}>
@@ -13,12 +13,14 @@ function LastTweets() {
                             placeholder="What's up"
                         />
                     </div>
-                    <div className= {styles.divbouton}>
+                    <div className={styles.divbouton}>
                         <button className={styles.tweetButton}>Tweet</button>
+                    </div>
+                    <div className={styles.tweetsModel}>
+                        <Tweets />
                     </div>
                 </div>
             </div>
-
         </div>
     )
 

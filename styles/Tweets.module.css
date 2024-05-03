@@ -1,0 +1,29 @@
+.tweetsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid #728394;
+}
+
+.trashIcon {
+    cursor: pointer;
+    margin: 5px;
+}
+
+.likeIcon {
+    cursor: pointer;
+    margin: 5px;
+}
+
+
+.tweetContent {
+display: flex;
+color: white;
+font-size: 14px;
+}
+
+.pfp {
+display: flex;
+}

@@ -2,30 +2,40 @@
     color: white;
     display: flex;
     flex-direction: row;
-    width: 35vw,
+    width: 35vw;
+    background-color: #15202B;
 }
 
 .trends {
     display: flex;
     font-size: 22px;
     font-weight: 700;
-    margin: 20px
+    margin: 20px;
+    height: 90vh;
+
 }
 
 .hashtags {
-display: flex;
-flex-direction: row;
-
+    display: flex;
+    flex-direction: column;
+    max-height: 85vh;
+    margin: 20px;
+    background-color: #1e2732;
+    border-radius: 10px;
+    overflow: scroll;
+    width: 30vw;
 }
 
 .h2 {
-display:flex;
-padding:30px;
-font-size: 12px;   
+    display: flex;
+    padding: 30px;
+    font-size: 12px;
+    background-color: #1E2732;
 }
 
 .h3 {
-    display:flex;
-    padding:30px;
-    font-size: 8px; 
+    display: flex;
+    padding: 30px;
+    font-size: 8px;
+    background-color: #1E2732;
 }

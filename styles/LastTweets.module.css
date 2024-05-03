@@ -20,6 +20,7 @@
     justify-content: center;
     border-left: 1px solid #728394;
     height: 100vh;
+    border-right: 1px solid #728394;
 }
 
 .home {
@@ -27,7 +28,6 @@
     width: 50vw;
     display: flex;
     justify-content: flex start;
-
 }
 
 .textZone {
@@ -54,4 +54,12 @@
     display: flex;
     padding: 30px;
     border-bottom: 1px solid #728394;
+}
+
+.tweetsModel {
+display: flex;
+flex-direction: column;
+padding: 20px;
+justify-content: center;
+align-items: center;
 }
