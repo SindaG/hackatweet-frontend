@@ -1,12 +1,24 @@
 import styles from '../styles/Home.module.css';
-import { useState } from "react";
+import { useEffect } from "react";
+import { useSelector } from 'react-redux';
 import React from 'react'
+import { useRouter } from 'next/router'
+
 import Image from 'next/image';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 
 
 function Home() {
+
+  const token = useSelector(state => state.user.value.token)
+  const router = useRouter()
+
+  useEffect(() => {
+    if (token) {
+      router.push('/login')
+    }
+  }, [])
 
   return (
     <div className={styles.container}>

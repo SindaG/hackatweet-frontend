@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import SignIn from '../components/SignIn';
 
 const initialState = {
   value: { firstname : null, username: null, token: null, },
