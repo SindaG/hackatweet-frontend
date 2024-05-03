@@ -1,6 +1,7 @@
 import styles from "../styles/SignIn.module.css";
 import { useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
+import Image from 'next/image';
 import { useRouter } from 'next/router'
 import Link from "next/link";
 import { login } from "../reducers/user";
@@ -29,10 +30,13 @@ function SignIn() {
 	};
 
   return (
-    <div className={styles.registerContainer}>
-      <div className={styles.registerSection}>
-        <p>Sign-in</p>
+    <div className={styles.signinContainer}>
+      <div className={styles.signinSection}>
+      <Image className={styles.logo} src="/logo.png" alt="logo" width={50} height={50} />
+        <p className={styles.signinTitle}>Sign-in</p>
+        <div className={styles.signinForm}>
         <input
+          className={styles.signinInput}
           type="text"
           placeholder="Username"
           id="signInUsername"
@@ -40,6 +44,7 @@ function SignIn() {
           value={signInUsername}
         />
         <input
+          className={styles.signinInput}
           type="password"
           placeholder="Password"
           id="signInPassword"
@@ -49,6 +54,7 @@ function SignIn() {
         <button id="connection" onClick={() => handleConnection()} className={styles.signin}>
           Connect
         </button>
+        </div>
       </div>
     </div>
   );
